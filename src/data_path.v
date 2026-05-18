@@ -45,7 +45,7 @@ module data_path #(
     );
 
     // ----- Instruction Memory -----
-    inst_mem imem (
+    InstMem imem (
         .addr(pc_out),
         .instruction(instruction)
     );
@@ -59,7 +59,7 @@ module data_path #(
     assign funct7 = instruction[31:25];
 
     // ----- Register File -----
-    reg_file rf (
+    RegFile rf (
         .clk(clk),
         .reset(reset),
         .rg_wrt_en(reg_write),
@@ -72,7 +72,7 @@ module data_path #(
     );
 
     // ----- Immediate -----
-    imm_gen imm (
+    ImmGen imm (
         .InstCode(instruction),
         .ImmOut(imm_out)
     );
@@ -99,7 +99,7 @@ module data_path #(
     assign alu_result = alu_out;
 
     // ----- Data Memory -----
-    data_mem dmem (
+    DataMem dmem (
         .clk(clk),
         .MemRead(mem_read),
         .MemWrite(mem_write),
