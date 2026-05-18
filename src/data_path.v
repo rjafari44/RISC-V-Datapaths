@@ -99,7 +99,7 @@ module data_path #(
     assign alu_result = alu_out;
 
     // ----- Data Memory -----
-    DataMem dmem (
+    data_mem dmem (
         .clk(clk),
         .MemRead(mem_read),
         .MemWrite(mem_write),
