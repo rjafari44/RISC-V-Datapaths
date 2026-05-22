@@ -112,7 +112,7 @@ Instructions 18-19 demonstrate memory operations: store r11 (0x00000005) to addr
 
 ## Simulation Waveform
 
-![Datapath Waveform](assets/datapath-waveform.png)
+![Datapath Waveform](assets/datapaths-waveform.png)
 
 ## Files
 
